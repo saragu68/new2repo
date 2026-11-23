@@ -1,0 +1,17 @@
+cat << 'EOF' > app_test.log
+2026-11-23 09:01:12 INFO [auth-service] User 'saragu' logged in from 192.168.1.10
+2026-11-23 09:02:45 INFO [api-gateway] GET /api/v1/health status=200 duration=12ms
+2026-11-23 09:04:03 WARN [db-pool] Connection pool usage at 78% (active=39/50)
+2026-11-23 09:05:19 ERROR [auth-service] Failed login attempt for user 'admin' from 203.0.113.42
+2026-11-23 09:05:21 ERROR [auth-service] Failed login attempt for user 'admin' from 203.0.113.42
+2026-11-23 09:05:24 ERROR [auth-service] Failed login attempt for user 'admin' from 203.0.113.42
+2026-11-23 09:07:10 INFO [worker-queue] Processed job_id=8841 in 210ms
+2026-11-23 09:09:50 WARN [api-gateway] Slow response GET /api/v1/reports status=200 duration=1450ms
+2026-11-23 09:11:02 ERROR [payment-service] Timeout connecting to payment gateway (txn_id=TX-9001)
+2026-11-23 09:12:30 CRITICAL [db-pool] Primary database connection exhausted (active=50/50)
+2026-11-23 09:12:35 ERROR [payment-service] Failed to record transaction txn_id=TX-9002: DB unavailable
+2026-11-23 09:14:18 INFO [auth-service] User 'kiran' logged in from 192.168.1.24
+2026-11-23 09:15:40 WARN [disk-monitor] Partition /var/log at 84% capacity
+2026-11-23 09:18:09 ERROR [api-gateway] POST /api/v1/orders status=503 duration=5002ms
+2026-11-23 09:20:00 INFO [worker-queue] Processed job_id=8842 in 185ms
+EOF
